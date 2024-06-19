@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable con Texto</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+        }
+        body{
+           background-image: url("https://scontent.fhmo2-1.fna.fbcdn.net/v/t39.30808-6/309382992_838818683923740_6048485105713823555_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHQknaSm4kvlJUPlJJm5gdZx1uktLCglaXHW6S0sKCVpTHmALGs8XkQMoZY1hMdet99R468StRlE_JDxHQbtgC0&_nc_ohc=RAN6IPtNej0Q7kNvgFfgwJR&_nc_zt=23&_nc_ht=scontent.fhmo2-1.fna&oh=00_AYDzV0CLNroqWRO59GwwovvSHsqWSsLia7TPBv_tCaDQqg&oe=6676FF67");
+           background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div{
+            max-width: 900px;
+            margin: auto;
+            background-color: #333;
+            font-size: 20px;
+            margin-top: 50px;
+        }
+
+
+        .menu{
+            display: inline;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu  li  a{
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            
+        }
+        .menu > li:hover{
+            background-color: rgb(251, 0, 255);
+        }
+            
+        .submenu{
+            position: absolute;
+            display: none;
+            list-style: none;
+            width: 200px;
+            background-color: rgba(255, 0, 247, 0.5);
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        .menu li:hover{
+        background-color: rgba(225, 73, 157, 0.432);
+        
+        }
+        .menu li a{
+        display: block;
+        color: rgb(239, 46, 184);
+        padding: 15px 15px 15px 20px;
+        text-decoration: none;
+        }
+        #textoMostrado {
+            margin-top: 20px;
+            font-size: 14px;
+            background-color: rgba(177, 49, 186, 0.708);
+        }
+        .titulo{
+            padding: 15px 15px 15px 20px;
+            margin-top: 20px;
+            background-color: rgba(225, 68, 228, 0.708);
+            color: rgb(226, 70, 185);
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <font color="black"><center><h1  style="display: inline-block; margin-right: 120px;">EG MAKE UP</h1></center></font>
+    </div>
+    <div class="menu" >
+        <ul>
+            <li style="display: inline-block;">
+                <a href="#">Servicios</a>
+                <ul class="submenu">
+                    <li><a href="#" data-texto="1">Maquillaje</a></li>
+                    <li><a href="#" data-texto="2">Peinado</a></li>
+                </ul>
+            </li>
+            <li style="display: inline-block;">
+                <a href="#">Horarios</a>
+                <ul class="submenu">
+                    <li><a href="#" data-texto="3">Lunes-Viernes</a></li>
+                    <li><a href="#" data-texto="4">Sabado-Domingo</a></li>
+                </ul>
+            </li>
+            <li style="display: inline-block;">
+                <a href="#">Promociones</a>
+                <ul class="submenu">
+                    <li><a href="#" data-texto="5">Febrero</a></li>
+                    <li><a href="#" data-texto="6">Mayo</a></li>
+                    <li><a href="#" data-texto="7">Junio</a></li>
+                    <li><a href="#" data-texto="8">Diciembre</a></li>
+                </ul>
+    </div>
+    <br><br><br><br>
+    <div id="textoMostrado"></div>
+    <script>
+        const submenus = document.querySelectorAll('.submenu a');
+
+
+        submenus.forEach(submenu => {
+            submenu.addEventListener('click', e => {
+                e.preventDefault();
+                const texto = e.target.getAttribute('data-texto');
+                switch (texto) {
+                    case "1":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Maquillaje</h2><br>
+                            <h3>Social</h3><br>
+                            <h3>Artistico</h3><br>
+                            <h3>Novia</h3><br>
+                            <h3>XV</h3><br>
+                            </center>
+                        `;
+                        break;
+                    case "2":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Peinado</h2><br>
+                            <h3>Ondas</h3><br>
+                            <h3>Semi recogido</h3><br>
+                            <h3>Recogido</h3><br>
+                            <h3>Coletas</h3><br>
+                            </center>
+                        `;
+                        break;
+                    case "3":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2> Lunes-Viernes</h2><br>
+                            <h3> 11:00 a.m.-7:00 p.m.</h3><br>
+                            </center>
+                        `;
+                    case "4":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Sabado-Domingo</h2><br>
+                            <h3>7:00 a.m.-10: p.m.</h3><br>
+                            </center>
+                        `;
+                        break;
+                    case "5":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Febrero</h2><br>
+                            <h3>Dia de los corazones: Peinado y Maquillaje<br>por solo 1000 pesos!</h3><br>
+                            </center>
+                        `;
+                        break;
+                   case "6":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2> Mayo</h2><br>
+                            <h3>Dia de las madres: Peinado y Maquillaje por solo 700 pesos a todas las mamas!</h3><br>
+                            </center>
+                        `;
+                        break;
+                    case "7":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Junio</h2><br>
+                            <h3>Graduaciones: Peinado y Maquillaje por solo 1200 pesos!</h3><br>
+                            </center>
+                        `;
+                        break;
+                    case "8":
+                        document.getElementById("textoMostrado").innerHTML=`
+                            <center>
+                            <h2>Diciembre</h2><br>
+                            <h3>Navidad: Peinado y Maquillaje por solo 1300 pesos!</h3><br>
+                            </center>
+                        `;
+                        break;
+                    default:
+                        break;
+                }
+                
+            });
+        });
+    </script>

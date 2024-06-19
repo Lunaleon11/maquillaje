@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display-area {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+        margin-bottom: 10px;
+        overflow: auto; /* Para agregar scroll si el contenido es 
+        demasiado grande */
+        }
+        </style>
+        </head>
+        <body bgcolor="pink">
+        <h1><center><font color="violet">Cuentanos cual fue tu experiencia en nuestra pagina</font></center></h1>
+        <center><div id="display-area"></div>
+        <button onclick="mostrarTexto()">Escribir</button>
+        <button onclick="limpiarDisplay()">Limpiar</button>
+        <script>
+        function mostrarTexto() {
+        var texto = prompt("texto a mostrar");
+        var displayArea = document.getElementById("display-area");
+        displayArea.innerHTML += "<p>" + texto + "</p>";
+        }
+        function limpiarDisplay() {
+        var displayArea = document.getElementById("display-area");
+        displayArea.innerHTML = "";
+        }
+        </script></center>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head> 
+        <style>
+            #img{
+            display: none;
+            } </style>
+            <body>
+                <br>
+            <center><button id="boton" onclick="mostrar();">Mostrar Imagen</button> <h1 id="boton" onclick="mostrar();"> Imagen del negocio</h1><div id="img">
+            <button id="boton" onclick="ocultar();">ocultar Imagen</button>
+            <img src="https://scontent.fnog1-1.fna.fbcdn.net/v/t39.30808-6/280941413_748201596318783_4751389864627761883_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGN0pUvFGCOylSD7doVFJiAOMmIt9Tg7kk4yYi31ODuSe7VGzjLQepvljaNVU4D6jE7vmZtSs3LX0xxZ7JYFpjQ&_nc_ohc=4GZimKZgdZ8Q7kNvgEZQegj&_nc_ht=scontent.fnog1-1.fna&oh=00_AYCom0wZpvAbd5gcSbVmH0HYazOxP90jgvf1vaE3MeurKQ&oe=667817DA" width="400px" alt="">
+            </div>
+            <script>
+            function mostrar(){
+            document.getElementById('img').style.display = 'block'; }
+            function ocultar(){ document.getElementById('img').style.display = 'none';
+            } </script></center>
+            <br><br><br>
+            </body> 
+            <style>
+                .calculator {
+                  width: 300px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  border: 1px solid #f200ff;
+                  border-radius: 5px;
+                  background-color: #ff00b3;
+                }
+              
+                .calculator input[type="text"] {
+                  width: 100%;
+                  margin-bottom: 10px;
+                  padding: 10px;
+                  border: 1px solid #f200ff;
+                  border-radius: 5px;
+                  font-size: 16px;
+                }
+              
+                .calculator button {
+                  width: 30%;
+                  padding: 10px;
+                  margin: 5px;
+                  border: 1px solid #ff00b3;
+                  border-radius: 5px;
+                  background-color: #f200ff;
+                  font-size: 16px;
+                  cursor: pointer;
+                }
+              
+                .calculator button:hover {
+                  background-color: #ff00b3;
+                }
+              
+                .calculator button.clear {
+                  width: 65%;
+                }
+              </style>
+              </head>
+              <body>
+              <h2><center><font color="violet">A continuacion te dejamos una calculadora simple<br> para que te ayudes y asi agendes una cita con tu presupuesto:</font></center></h2>
+              <div class="calculator">
+                <input type="text" id="display" readonly>
+                <button onclick="addToDisplay('1')">1</button>
+                <button onclick="addToDisplay('2')">2</button>
+                <button onclick="addToDisplay('3')">3</button>
+                <button onclick="addToDisplay('4')">4</button>
+                <button onclick="addToDisplay('5')">5</button>
+                <button onclick="addToDisplay('6')">6</button>
+                <button onclick="addToDisplay('7')">7</button>
+                <button onclick="addToDisplay('8')">8</button>
+                <button onclick="addToDisplay('9')">9</button>
+                <button onclick="addToDisplay('0')">0</button>
+                <button onclick="addToDisplay('+')">+</button>
+                <button onclick="addToDisplay('-')">-</button>
+              
+                <button onclick="calculate()">=</button>
+                <button class="clear" onclick="clearDisplay()">Clear</button>
+              </div>
+              
+              <script>
+                function addToDisplay(value) {
+                  document.getElementById('display').value += value;
+                }
+              
+                function calculate() {
+                  var result = eval(document.getElementById('display').value);
+                  document.getElementById('display').value = result;
+                }
+              
+                function clearDisplay() {
+                  document.getElementById('display').value = '';
+                }
+              </script>
+              
+        
+        </html>
+        </body>
