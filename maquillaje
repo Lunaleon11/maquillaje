@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pw</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff00dd55;
+        }
+        header {
+            background-color:#9d00ff58 ;
+            color: #9d00ff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f198e5;
+            color: #f198e5;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #ff00dd;
+            text-decoration: rgb(255, 255, 255);
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #9d00ff;
+            color: #9d00ff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <body>
+    <header>
+        <style>
+            .marquee {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                box-sizing: border-box;
+                animation: marquee 10s linear infinite;
+            }
+    
+            @keyframes marquee {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            nav {
+                background: rgb(204, 0, 255);
+                padding: 10px 20px;
+                display: flex;
+                justify-content: center;
+            }
+    
+    
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+    
+    
+            nav ul li {
+                margin: 0 15px;
+            }
+    
+    
+            nav ul li a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+            }
+    
+    
+            nav ul li a:hover {
+                color: #ff00fb;
+            }
+    
+    
+            nav ul li a i {
+                margin-right: 8px;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div class="marquee">
+            <span><h1><font color="pink">EG MAKE UP</font></h1></span>
+        </div>
+    </body>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="referencias.html"><i class="fas fa-home"></i>REFERENCIAS</a></li>
+            <li><a href="acerca.html"><i class="fas fa-info-circle"></i>SOBRE NOSOTROS</a></li>
+            <li><a href="ubicacion.html"><i class="fas fa-map-marker-alt"></i>UBICACION</a></li>
+            <li><a href="contacto.html"><i class="fas fa-envelope"></i>CONTACTOS</a></li>
+            <li><a href="citas.html"><i class="fas fa-user"></i>USTEDES</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <h3><font color="lightgreen">&copy; EG Make Up | Creditos: Leon Bernal Luna Esmeralda | Ultima Fecha de Actualizacion: 14 Junio 2024</font></h3>
+    </footer>
+    <body>
+        <style>@keyframes ejemplo {
+            from { background-color: rgb(195, 79, 145); } to { background-color: violet; }
+            }
+            body {
+            animation-name: ejemplo; animation-duration: 4s; animation-iteration-count: infinite;
+            }
+               
+            </style>
+    </body>
+</body>
+</html>
